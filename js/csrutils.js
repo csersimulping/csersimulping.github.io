@@ -5,7 +5,7 @@
 CsrUtils = window.CsrUtils || {};
 
 var CsrUtils = (function () {
-	var csrApiHost = 'https://cser.simulping.com:38183/api/v1';
+	var csrApiHost = 'https://mylespepper2737372737.github.io/RobloxLabsTemp';
 	var yourVar2;
 
 	// public
