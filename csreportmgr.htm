@@ -233,7 +233,7 @@
 						reportId = reportId.substring(11);
 						var r = confirm('Do you want to delete CSREPORT #' + reportId + '?');
 						if (r) {
-							var vUrl = CsrUtils.csrApiHost + '/Report/Delete?id=' + reportId;
+							var vUrl = CsrUtils.csrApiHost + '/Report/Delete.ts?id=' + reportId;
 							//alert(vUrl);
 							$.ajax({
 								type: 'POST',
@@ -291,7 +291,7 @@
 
 				var vUrl =
 					CsrUtils.csrApiHost +
-					'/report/create?st=' +
+					'/Report/Create.ts?st=' +
 					dtBegin.getTime() / 1000 +
 					'&et=' +
 					dtEnd.getTime() / 1000 +
@@ -320,7 +320,7 @@
 			$(function () {
 				function init() {
 					$.ajax({
-						url: CsrUtils.csrApiHost + '/Report/List',
+						url: CsrUtils.csrApiHost + '/Report/List.ts',
 						type: 'GET',
 						data: '',
 						success: function (data, status) {
@@ -389,7 +389,7 @@
 										data.result[i].ID +
 										"' href='" +
 										CsrUtils.csrApiHost +
-										'/Report?id=' +
+										'/Report.ts?id=' +
 										data.result[i].ID +
 										"&style=csv' target='_blank'>Download</a></span>";
 									if (removable) {
