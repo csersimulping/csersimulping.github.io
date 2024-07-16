@@ -211,7 +211,7 @@
 					//alert("Playerid = " + playerid);
 					if (playerid != '' && !isNaN(playerid)) {
 						var vExternalTimeRange = 0;
-						var vUrl = CsrUtils.csrApiHost + '/player/history?id=' + playerid;
+						var vUrl = CsrUtils.csrApiHost + '/Player/History?id=' + playerid;
 						if (urlParams.has('st')) {
 							vUrl += '&st=' + urlParams.get('st');
 							vExternalTimeRange = 1;
