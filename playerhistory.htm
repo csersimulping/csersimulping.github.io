@@ -208,7 +208,7 @@
 
 				function init() {
 					var playerid = $('#player-id-text').val();
-					//alert("Playerid = " + playerid);
+					alert("Playerid = " + playerid);
 					if (playerid != '' && !isNaN(playerid)) {
 						var vExternalTimeRange = 0;
 						var vUrl = CsrUtils.csrApiHost + '/player/history?id=' + playerid;
@@ -251,7 +251,7 @@
 							vUrl += '&et=' + tend;
 						}
 
-						//alert("Get: " + vUrl);
+						alert("Get: " + vUrl);
 
 						$('#tbl_reports_body').empty();
 						$('#wait-spinner').show();
