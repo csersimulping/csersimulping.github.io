@@ -108,7 +108,7 @@
 
 			$(document).ready(function () {
 				function getReportTimeRange(id) {
-					var vUrl = CsrUtils.csrApiHost + '/report/meta?id=' + id;
+					var vUrl = CsrUtils.csrApiHost + '/Report/Meta?id=' + id;
 					//alert("Get: " + vUrl);
 					$.ajax({
 						async: false,
@@ -128,7 +128,7 @@
 				}
 
 				function init(id) {
-					$.get(CsrUtils.csrApiHost + '/report?id=' + id, function (data, status) {
+					$.get(CsrUtils.csrApiHost + '/Report?id=' + id, function (data, status) {
 						var i = 0;
 						var idx = 0;
 						for (i = 0; i < data.result.length; i++) {
