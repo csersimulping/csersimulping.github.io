@@ -149,7 +149,7 @@
 					dtEnd.setDate(dtEnd.getDate() + 1);
 					if (dtNow.getTime() < dtEnd.getTime()) dtEnd = new Date(dtNow);
 				}
-				//alert("End date: " + dtEnd);
+				alert("End date: " + dtEnd);
 
 				var generalTimespan = $('#sel-timespan').val();
 				var tend = dtEnd.getTime();
@@ -157,7 +157,7 @@
 				tend = tend / 1000;
 				var tbegin = tend - generalTimespan * 3600;
 				var vUrl = vBaseUrl + '/stats?st=' + tbegin + '&et=' + tend;
-				//alert("GET " + vUrl);
+				alert("GET " + vUrl);
 
 				$.ajax({
 					type: 'GET',
