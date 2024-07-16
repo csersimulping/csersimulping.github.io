@@ -234,7 +234,7 @@
 						var r = confirm('Do you want to delete CSREPORT #' + reportId + '?');
 						if (r) {
 							var vUrl = CsrUtils.csrApiHost + '/report/delete?id=' + reportId;
-							alert(vUrl);
+							//alert(vUrl);
 							$.ajax({
 								type: 'POST',
 								url: vUrl,
@@ -242,7 +242,7 @@
 								success: function (data, status) {
 									alert('CSREPORT #' + reportId + ' has been deleted!');
 									// so the row name is "csreport-" + reportId
-									alert("Response:" + JSON.stringify(data));
+									//alert("Response:" + JSON.stringify(data));
 									var row = document.getElementById('csreport-' + reportId);
 									row.setAttribute('style', 'background-color: rgb(220, 220, 220)');
 									$('#btn-create-report').prop('disabled', true);
@@ -270,7 +270,7 @@
 				var sThrottle = $('#sel-throttle').val();
 				var sBegin = $('#datepicker1').val();
 				var sEnd = $('#datepicker2').val();
-				alert( "Creating new report ...\nFrom: " + sBegin + "\nTo:  " + sEnd);
+				//alert( "Creating new report ...\nFrom: " + sBegin + "\nTo:  " + sEnd);
 				var dtBegin = CsrUtils.localDateStringToDate(sBegin);
 				var dtEnd = CsrUtils.localDateStringToDate(sEnd);
 				if (isNaN(dtBegin.getTime())) {
@@ -283,9 +283,9 @@
 				}
 				dtEnd = CsrUtils.addDays(dtEnd, 1);
 
-				alert("Creating CSREPORT from:\n        "
-				     + CsrUtils.timeToLocalTimeString(dtBegin) + " (" + dtBegin.toISOString() + ")"
-				     + "\nto:\n        " + CsrUtils.timeToLocalTimeString(dtEnd) + " (" + dtEnd.toISOString() + ")\n");
+				//alert("Creating CSREPORT from:\n        "
+				  //   + CsrUtils.timeToLocalTimeString(dtBegin) + " (" + dtBegin.toISOString() + ")"
+				  //   + "\nto:\n        " + CsrUtils.timeToLocalTimeString(dtEnd) + " (" + dtEnd.toISOString() + ")\n");
 				var createConfirm = confirm("Do you want to create CSREPORT from '" + sBegin + "' to '" + sEnd + "'?\n");
 				if (!createConfirm) return;
 
@@ -299,7 +299,7 @@
 					sSeverity +
 					'&throttle=' +
 					sThrottle;
-				alert("REST: POST " + vUrl);
+				//alert("REST: POST " + vUrl);
 
 				$.ajax({
 					type: 'POST',
@@ -307,8 +307,8 @@
 					data: '',
 					dataType: 'json',
 					success: function (data, status) {
-						alert("New report has been created, waiting for server processing ...");
-						alert("Response:" + JSON.stringify(data));
+						//alert("New report has been created, waiting for server processing ...");
+						//alert("Response:" + JSON.stringify(data));
 						location.reload();
 					},
 					error: function (jqXHR, status, error) {
